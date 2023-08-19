@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8" />
-    <title>Code Quiz</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Quick Code Quiz</title>
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css">
 </head>
-
 
 <body>
     <header>
-        <a href="#view-highscores">View Highscores</a>
-        <p>Time: 0</p>
+        <a href="./quiz.html">View Highscores</a>
+        <a id="time" class="timer"></a>
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     </header>
 
     <div class="opening-page">
         <h1>Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
-        <button onclick="window.location.href='./first-question.html'" id="start-btn" class="btn btn-start">Start Quiz</button>
+        <button onclick= "location.href = './quiz.html'" class="btn btn-start">Start Quiz</button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
-
 
 </html>
