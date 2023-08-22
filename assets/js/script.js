@@ -7,15 +7,12 @@ function timer() {
         timeLeft--;
         timeEl.textContent = "Time: " + timeLeft;
 
-        if (timeLeft === 0) {
-            clearInterval(timerInterval);
-            Q1.setAttribute("style", "display: none");
-            Q2.setAttribute("style", "display: none");
-            Q3.setAttribute("style", "display:none");
-            Q4.setAttribute("style", "display: none");
-            Q5.setAttribute("style", "display: none");
-            allDone.setAttribute("style", "display: block");
-        }
+
+        var userScore = document.querySelector("#user-score");
+        var points = document.querySelector("#points");
+
+        userScore.textContent = timeLeft;
+        points.textContent = timeLeft;
 
 
         var Q1 = document.querySelector("#Q1");
@@ -27,9 +24,9 @@ function timer() {
         var correct = document.getElementById("correct");
         var wrong = document.getElementById("wrong");
 
-        var Q1Alerts = document.getElementById("Q1Alerts");
         var Q1Strings = document.getElementById("Q1Strings");
         var Q1Booleans = document.getElementById("Q1Booleans");
+        var Q1Alerts = document.getElementById("Q1Alerts");
         var Q1Numbers = document.getElementById("Q1Numbers");
 
         var Q2Quotes = document.getElementById("Q2Quotes");
@@ -53,21 +50,24 @@ function timer() {
         var Q5Console = document.getElementById("Q5Console");
 
 
-        Q1Alerts.addEventListener("click", function() {
+        if (timeLeft === 0) {
+            clearInterval(timerInterval);
+            Q1.setAttribute("style", "display: none");
+            Q2.setAttribute("style", "display: none");
+            Q3.setAttribute("style", "display:none");
+            Q4.setAttribute("style", "display: none");
+            Q5.setAttribute("style", "display: none");
+            allDone.setAttribute("style", "display: block");
+        }
 
-            if (Q1Alerts !== false) {
-                Q1.setAttribute("style", "display:none");
-                Q2.setAttribute("style", "display: flex");
-                correct.setAttribute("style", "display: flex");
-            }
-        });
+
         Q1Strings.addEventListener("click", function() {
 
             if (Q1Alerts !== true) {
                 Q1.setAttribute("style", "display:none");
                 Q2.setAttribute("style", "display: flex");
                 wrong.setAttribute("style", "display: flex");
-               
+                timeLeft --- 20;
             }
         });
         Q1Booleans.addEventListener("click", function() {
@@ -76,7 +76,15 @@ function timer() {
                 Q1.setAttribute("style", "display:none");
                 Q2.setAttribute("style", "display: flex");
                 wrong.setAttribute("style", "display: flex");
-                
+                timeLeft --- 20;
+            }
+        });
+        Q1Alerts.addEventListener("click", function() {
+
+            if (Q1Alerts !== false) {
+                Q1.setAttribute("style", "display:none");
+                Q2.setAttribute("style", "display: flex");
+                correct.setAttribute("style", "display: flex");
             }
         });
         Q1Numbers.addEventListener("click", function() {
@@ -85,7 +93,7 @@ function timer() {
                 Q1.setAttribute("style", "display:none");
                 Q2.setAttribute("style", "display: flex");
                 wrong.setAttribute("style", "display: flex");
-                
+                timeLeft --- 20;
             }
         });
 
@@ -97,7 +105,7 @@ function timer() {
                 Q3.setAttribute("style", "display:flex"); 
                 correct.setAttribute("style", "display: none");
                 wrong.setAttribute("style", "display: flex");
-                
+                timeLeft --- 20;
             }
         });
         Q2Curly.addEventListener("click", function() {
@@ -107,7 +115,7 @@ function timer() {
                 Q3.setAttribute("style", "display:flex");
                 correct.setAttribute("style", "display: none");
                 wrong.setAttribute("style", "display: flex");
-                
+                timeLeft --- 20;
             }
         });
         Q2Parent.addEventListener("click", function() {
@@ -126,7 +134,7 @@ function timer() {
                 Q3.setAttribute("style", "display:flex");
                 correct.setAttribute("style", "display: none");
                 wrong.setAttribute("style", "display: flex");
-                
+                timeLeft --- 20;
             }
         });
 
@@ -138,7 +146,7 @@ function timer() {
                 Q4.setAttribute("style", "display:flex"); 
                 correct.setAttribute("style", "display: none");
                 wrong.setAttribute("style", "display: flex");   
-                
+                timeLeft --- 20;
             }
         });
         Q3Other.addEventListener("click", function() {
@@ -148,7 +156,7 @@ function timer() {
                 Q4.setAttribute("style", "display:flex"); 
                 correct.setAttribute("style", "display: none");
                 wrong.setAttribute("style", "display: flex");  
-                
+                timeLeft --- 20;
             }
         });
         Q3Booleans.addEventListener("click", function() {
@@ -158,7 +166,7 @@ function timer() {
                 Q4.setAttribute("style", "display:flex"); 
                 correct.setAttribute("style", "display: none");
                 wrong.setAttribute("style", "display: flex");
-                
+                timeLeft --- 20;
             }
         });
         Q3All.addEventListener("click", function() {
@@ -179,7 +187,7 @@ function timer() {
                 Q5.setAttribute("style", "display:flex"); 
                 correct.setAttribute("style", "display: none");
                 wrong.setAttribute("style", "display: flex");   
-                
+                timeLeft --- 20;
             }
         });
         Q4Curly.addEventListener("click", function() {
@@ -189,7 +197,7 @@ function timer() {
                 Q5.setAttribute("style", "display:flex");
                 correct.setAttribute("style", "display: none");
                 wrong.setAttribute("style", "display: flex"); 
-                   
+                timeLeft --- 20;
             }
         });
         Q4Quotes.addEventListener("click", function() {
@@ -208,6 +216,7 @@ function timer() {
                 Q5.setAttribute("style", "display:flex");  
                 correct.setAttribute("style", "display: none");
                 wrong.setAttribute("style", "display: flex");  
+                timeLeft --- 20;
             }
         });
 
@@ -220,6 +229,7 @@ function timer() {
                 allDone.setAttribute("style", "display: block");
                 wrong.setAttribute("style", "display: flex");
                 clearInterval(timerInterval);
+                timeLeft --- 20;
             }
         });
         Q5Term.addEventListener("click", function() {
@@ -242,6 +252,7 @@ function timer() {
                 correct.setAttribute("style", "display: none");
                 wrong.setAttribute("style", "display: flex"); 
                 clearInterval(timerInterval);
+                timeLeft --- 20;
             }
         });
         Q5Console.addEventListener("click", function() {
@@ -253,9 +264,10 @@ function timer() {
                 correct.setAttribute("style", "display: none"); 
                 wrong.setAttribute("style", "display: flex");
                 clearInterval(timerInterval);
+                timeLeft --- 20;
             }
+
         });
-        
     }, 1000);
 }
 timer();
@@ -263,17 +275,10 @@ timer();
 var allDone = document.querySelector(".all-done");
 var scorePage = document.querySelector(".score-page");
 
-var userScore = document.querySelector("#user-score");
-var points = document.querySelector("#points");
-
 var input = document.querySelector("#input");
 var submitBtn = document.querySelector("#submit-btn");
-
+var clearBtn = document.querySelector("#clear-btn");
 var highscore = document.querySelector("#highscore");
-
-userScore.textContent = timeLeft;
-points.textContent = timeLeft;
-
 
 submitBtn.addEventListener("click", function() {
 
@@ -289,5 +294,8 @@ submitBtn.addEventListener("click", function() {
     }
 });
 
-var clearBtn = document.querySelector("#clear-btn");
-var newScore = document.querySelector("newScore");
+clearBtn.addEventListener("click", function() {
+
+    var newScore = document.getElementById("newScore");
+    newScore.remove();
+});
