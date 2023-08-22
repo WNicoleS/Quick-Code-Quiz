@@ -9,8 +9,22 @@
 <body>
      
     <header>
-        <a id="view" href="">View Highscores</a>
+        <a id="view" onclick="scores()">View Highscores</a>
         <a id="time" class="timer"></a>
+        <script>
+            function scores() {
+                Q1.setAttribute("style", "display:none");
+                Q2.setAttribute("style", "display: none");
+                Q3.setAttribute("style", "display:none");
+                Q4.setAttribute("style", "display:none"); 
+                Q5.setAttribute("style", "display:none");
+                timeEl.setAttribute("style", "display: none");
+                correct.setAttribute("style", "display: none"); 
+                wrong.setAttribute("style", "display: none");
+                allDone.setAttribute("style", "display: none");
+                scorePage.setAttribute("style", "display: block");
+            }
+        </script>
     </header>
 
     
